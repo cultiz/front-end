@@ -1,0 +1,48 @@
+{# app/views/base.html.twig #}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	{% block head %}
+		<title>
+			{% block pageTitle %}{% endblock %} - Cultiz
+		</title>
+
+		{% block meta %}{% endblock %}
+		{% block css %}{% endblock %}
+	{% endblock %}
+</head>
+<body>
+	<header>
+		{% block header %}
+
+		{% endblock %}
+	</header>
+
+	{% block fullWidth %}
+
+		<aside>
+			{% block sidebar %}
+
+			{% endblock %}
+		</aside>
+		
+		<section>
+			{% block content %}
+
+			{% endblock %}
+		</section>
+	
+	{% endblock %}
+
+	<footer>
+		{% block footer %}
+
+		{% endblock %}
+	</footer>
+
+	{% block scripts %}
+
+	{% endblock %}
+</body>
+</html>
