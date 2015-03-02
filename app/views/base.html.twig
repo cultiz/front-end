@@ -1,21 +1,24 @@
-{# app/views/base.html.twig #}
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	{% block head %}
-		<title>
-			{% block pageTitle %}{% endblock %} - Cultiz
-		</title>
+	<title>
+		{% block pageTitle %}
+			Cultiz, webzine Street à tendance Geek
+		{% endblock %}
+	</title>
 
-		{% block meta %}{% endblock %}
-		{% block css %}{% endblock %}
+	{% block meta %}
+
+	{% endblock %}
+
+	{% block css %}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	{% endblock %}
 </head>
-<body>
+<body class="container">
 	<header>
 		{% block header %}
-
+			{% include 'includes/header.html.twig' %}
 		{% endblock %}
 	</header>
 
@@ -23,26 +26,25 @@
 
 		<aside>
 			{% block sidebar %}
-
+				{% include 'includes/sidebar.html.twig' %}
 			{% endblock %}
 		</aside>
 		
 		<section>
-			{% block content %}
-
-			{% endblock %}
+			{% block content %}{% endblock %}
 		</section>
 	
 	{% endblock %}
 
 	<footer>
 		{% block footer %}
-
+			{% include 'includes/footer.html.twig' %}
 		{% endblock %}
 	</footer>
 
 	{% block scripts %}
-
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	{% endblock %}
 </body>
 </html>

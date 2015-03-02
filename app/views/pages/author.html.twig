@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block meta %}
+
+{% endblock %}
+
+{% block content %}
+	<header>
+		<h1>{{ author.user_nicename }}</h1>
+	</header>
+
+	<ol>
+		{% for post in posts %}
+			<li>
+				<article>
+					<a href="http://localhost:8888/cultiz/{{ post.post_name }}">
+						{{ post.post_title|raw }}
+					</a>
+				</article>
+			</li>
+		{% endfor %}
+	</ol>
+{% endblock %}

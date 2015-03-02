@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block meta %}
+
+{% endblock %}
+
+{% block content %}
+	<header>
+		<h1>{{ post.post_title|raw }}</h1>
+	</header>
+	
+	<div>
+		{{ post.post_content|raw }}
+	</div>
+{% endblock %}
